@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "result": 2,
+  "description": "Pending",
+  "header": {
+    "requestTimestamp": "2018-04-23T18:31:01Z",
+    "requestCode": "001.11231213-9f43-4470-8b82-7b3587324256"
+  },
+  "body": {
+    "redirect": {
+      "url": "https://money.yandex.ru/eshop.xml",
+      "fields": {
+        "ndcid": "8a8394c15b422227015b5cf62c7c79ad_cda35b12212121212124b9f",
+        "shopArticleId": "434402",
+        "customerNumber": "12345",
+        "scid": "98571111",
+        "shopDefaultURL": "https://acaptureservices.com/connectors/asyncresponse?asyncsource=YANDEX&TYPE=CANCEL",
+        "shopSuccessURL": "https://acaptureservices.com/connectors/asyncresponse?asyncsource=YANDEX&TYPE=SUCCESS",
+        "MerchantData2": "ACAPTURESERVICES",
+        "MerchantData1": "abc1q2.prod01-vm-con03",
+        "orderNumber": "abc123",
+        "shopFailURL": "https://acaptureservices.com/connectors/asyncresponse?asyncsource=YANDEX&TYPE=FAIL",
+        "MerchantData3": "VERSION_3",
+        "shopID": "11223344",
+        "sum": "756.53",
+        "cps_email": "unittest@gmail.com"
+      }
+    },
+    "transaction": {
+      "descriptor": "Descriptx",
+      "amount": 756.53,
+      "brandId": 4030,
+      "currencyCode": "RUB",
+      "action": "payment",
+      "id": "11223344",
+      "trackingCode": "abc123"
+    }
+  }
+}

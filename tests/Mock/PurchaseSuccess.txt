@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Cache-Control: max-age=0, private, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Fri, 15 Feb 2013 15:42:42 GMT
+Status: 200
+Strict-Transport-Security: max-age=31536000
+Vary: User-Agent
+
+{
+  "result": 0,
+  "description": "Ok",
+  "header": {
+    "requestTimestamp": "2018-04-26T09:38:10Z",
+    "requestCode": "001.e75d8e1a-1158-4399-be63-b64d7e9640b7"
+  },
+  "body": {
+    "card": {
+      "approvalCode": "061891",
+      "cvvResult": "M"
+    },
+    "transaction": {
+      "amount": 68,
+      "brandId": 1010,
+      "currencyCode": "GBP",
+      "action": "payment",
+      "id": "77ea64d2-a011-4643-a254-36a063ed2b7f",
+      "trackingCode": "5707C1524735142"
+    }
+  }
+}
