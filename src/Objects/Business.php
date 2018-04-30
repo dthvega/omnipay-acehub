@@ -148,4 +148,3 @@ class Business extends CreditCard
         return $this->getParameter('subMerchantId');
     }
 }
-

@@ -496,8 +496,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('paymentType','card');
-
+        $this->validate('paymentType', 'card');
 
         if (in_array($this->getPaymentType(), Helper::$cards)) {
             $this->getCard()->validate();
@@ -524,7 +523,7 @@ class AuthorizeRequest extends AbstractRequest
             $data['body']['bank'] = $this->getBankData();
         }
 
-        if($identifier = $this->getAccountIdentifier()){
+        if ($identifier = $this->getAccountIdentifier()) {
             $data['wallet']['accountIdentifier']    = $identifier;
             $data['wallet']['accountKey']           = $this->getAccountKey();
         }
@@ -534,8 +533,7 @@ class AuthorizeRequest extends AbstractRequest
             'street'         => $card->getBillingAddress1(),
             'city'           => $card->getCity(),
             'countryCode'    => $card->getCountry()
-       );
-
+        );
         return $data;
     }
 

@@ -18,7 +18,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function isSuccessful()
     {
-       return ($this->data['result'] === 0);
+        return ($this->data['result'] === 0);
     }
 
     /**
@@ -34,7 +34,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getRedirectUrl()
     {
-       return $this->isRedirect() ? $this->data['body']["redirect"]["url"] :null;
+        return $this->isRedirect() ? $this->data['body']["redirect"]["url"] :null;
     }
 
     /**
