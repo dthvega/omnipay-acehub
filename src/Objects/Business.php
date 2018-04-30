@@ -6,22 +6,19 @@ use Omnipay\Common\CreditCard;
 use Omnipay\Common\Helper;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
-
 /**
  * Class Business
  * @package Omnipay\Acehub\Objects
  */
 class Business extends CreditCard
 {
-
-
     /**
      * @param string $value
      * @return CreditCard
      */
     public function setName($value)
     {
-        return $this->setParameter('name',$value);
+        return $this->setParameter('name', $value);
     }
 
     /**
@@ -55,7 +52,7 @@ class Business extends CreditCard
      */
     public function setShortName($value)
     {
-        return $this->setParameter('shortName',$value);
+        return $this->setParameter('shortName', $value);
     }
 
     /**
@@ -89,7 +86,7 @@ class Business extends CreditCard
      */
     public function setStateCode($value)
     {
-        return $this->setParameter('stateCode',$value);
+        return $this->setParameter('stateCode', $value);
     }
 
     /**
@@ -140,7 +137,7 @@ class Business extends CreditCard
      */
     public function setSubMerchantId($value)
     {
-        return $this->setParameter('subMerchantId',$value);
+        return $this->setParameter('subMerchantId', $value);
     }
 
     /**
@@ -150,5 +147,5 @@ class Business extends CreditCard
     {
         return $this->getParameter('subMerchantId');
     }
-
 }
+

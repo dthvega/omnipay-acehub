@@ -72,7 +72,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function getEndpoint()
     {
-        if($this->getTestMode()) {
+        if ($this->getTestMode()) {
             return $this->testEndpoint;
         }
         return $this->liveEndpoint;
@@ -159,7 +159,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         try {
             // Set TLS version to 1.2
-            $httpRequest->setAuth($this->getUserName(),$this->getPassword());
+            $httpRequest->setAuth($this->getUserName(), $this->getPassword());
             $httpRequest->getCurlOptions()->set(CURLOPT_SSLVERSION, 6);
             $httpResponse  = $httpRequest->send();
             $jsonToArrayResponse = $httpResponse->json();
@@ -178,7 +178,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function getData()
     {
-        $this->validate('amount','currency');
+        $this->validate('amount', 'currency');
 
         $data = array(
             'header' => array(
@@ -196,6 +196,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
      */
     public function createResponse($data)
     {
-        return new Response($this,$data);
+        return new Response($this, $data);
     }
 }

@@ -74,9 +74,9 @@ class Helper
      );
 
 
-     public static function determineBrandId($type)
-     {
-         $toCheck =  self::$brandIds + self::$cards;
-         return (string) array_search(strtoupper($type),array_map('strtoupper',$toCheck));
+    public static function determineBrandId($type)
+    {
+        $toCheck =  self::$brandIds + self::$cards;
+        return (string) array_search(strtoupper($type), array_map('strtoupper', $toCheck));
     }
 }

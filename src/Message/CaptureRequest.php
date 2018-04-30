@@ -18,7 +18,7 @@ class CaptureRequest extends AbstractRequest
      */
     public function action()
     {
-        return sprintf('payments/%s/capture',$this->getTransactionReference());
+        return sprintf('payments/%s/capture', $this->getTransactionReference());
     }
 
     /**
@@ -27,7 +27,7 @@ class CaptureRequest extends AbstractRequest
      */
     public function setInvoiceId($value)
     {
-        return $this->setParameter('invoiceId',$value);
+        return $this->setParameter('invoiceId', $value);
     }
 
     /**
@@ -62,5 +62,5 @@ class CaptureRequest extends AbstractRequest
         );
         return $data;
     }
-
 }
+

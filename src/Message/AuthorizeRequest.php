@@ -46,7 +46,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setPaymentType($value)
     {
-        return $this->setParameter('paymentType',$value);
+        return $this->setParameter('paymentType', $value);
     }
 
     /**
@@ -55,7 +55,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setCustomerId($value)
     {
-        return $this->setParameter('customerId',$value);
+        return $this->setParameter('customerId', $value);
     }
 
 
@@ -81,7 +81,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setStoreId($value)
     {
-        return $this->setParameter('storeId',$value);
+        return $this->setParameter('storeId', $value);
     }
 
     /**
@@ -98,7 +98,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setInvoiceId($value)
     {
-        return $this->setParameter('invoice',$value);
+        return $this->setParameter('invoice', $value);
     }
 
     /**
@@ -115,7 +115,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setLanguageCode($value)
     {
-        return $this->setParameter('languageCode',$value);
+        return $this->setParameter('languageCode', $value);
     }
 
     /**
@@ -133,7 +133,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setSource($value)
     {
-        return $this->setParameter('source',$value);
+        return $this->setParameter('source', $value);
     }
 
     /**
@@ -151,7 +151,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setType($value)
     {
-        return $this->setParameter('type',$value);
+        return $this->setParameter('type', $value);
     }
 
 
@@ -170,7 +170,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setDescriptor($value)
     {
-        return $this->setParameter('descriptor',$value);
+        return $this->setParameter('descriptor', $value);
     }
 
     /**
@@ -188,7 +188,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setTokenize($value)
     {
-        return $this->setParameter('descriptor',$value);
+        return $this->setParameter('descriptor', $value);
     }
 
     /**
@@ -206,7 +206,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setPayTimeout($value)
     {
-        return $this->setParameter('payTimeout',$value);
+        return $this->setParameter('payTimeout', $value);
     }
 
     /**
@@ -257,7 +257,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setEci($value)
     {
-        return $this->setParameter('eci',$value);
+        return $this->setParameter('eci', $value);
     }
 
     /**
@@ -274,7 +274,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setAvv($value)
     {
-        return $this->setParameter('avv',$value);
+        return $this->setParameter('avv', $value);
     }
 
     /**
@@ -291,7 +291,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setXid($value)
     {
-        return $this->setParameter('xid',$value);
+        return $this->setParameter('xid', $value);
     }
 
     /**
@@ -308,7 +308,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setCheckEnrollment($value)
     {
-        return $this->setParameter('checkEnrollment',$value);
+        return $this->setParameter('checkEnrollment', $value);
     }
 
     /**
@@ -326,7 +326,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setAccountIdentifier($value)
     {
-        return $this->setParameter('checkEnrollment',$value);
+        return $this->setParameter('checkEnrollment', $value);
     }
 
     /**
@@ -343,7 +343,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setAccountKey($value)
     {
-        return $this->setParameter('accountKey',$value);
+        return $this->setParameter('accountKey', $value);
     }
 
     /**
@@ -360,7 +360,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setSex($value)
     {
-        return $this->setParameter('sex',$value);
+        return $this->setParameter('sex', $value);
     }
 
     /**
@@ -377,7 +377,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setBirthDay($value)
     {
-        return $this->setParameter('birthday',$value);
+        return $this->setParameter('birthday', $value);
     }
 
     /**
@@ -394,7 +394,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setIdentificationTypeId($value)
     {
-        return $this->setParameter('identificationTypeId',$value);
+        return $this->setParameter('identificationTypeId', $value);
     }
 
     /**
@@ -411,7 +411,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setIdentificationNumber($value)
     {
-        return $this->setParameter('identificationNumber',$value);
+        return $this->setParameter('identificationNumber', $value);
     }
 
     /**
@@ -428,7 +428,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setCustomerType($value)
     {
-        return $this->setParameter('customerType',$value);
+        return $this->setParameter('customerType', $value);
     }
 
     /**
@@ -453,7 +453,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setTaxNumber($value)
     {
-        return $this->setParameter('taxNumber',$value);
+        return $this->setParameter('taxNumber', $value);
     }
 
     /**
@@ -470,7 +470,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setHttpUserAgent($value)
     {
-        return $this->setParameter('httpUserAgent',$value);
+        return $this->setParameter('httpUserAgent', $value);
     }
 
     /**
@@ -487,7 +487,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function setDeviceType($value)
     {
-        return $this->setParameter('deviceType',$value);
+        return $this->setParameter('deviceType', $value);
     }
 
     /**
@@ -499,7 +499,7 @@ class AuthorizeRequest extends AbstractRequest
         $this->validate('paymentType','card');
 
 
-        if(in_array($this->getPaymentType(),Helper::$cards)) {
+        if (in_array($this->getPaymentType(), Helper::$cards)) {
             $this->getCard()->validate();
         }
 
@@ -512,27 +512,31 @@ class AuthorizeRequest extends AbstractRequest
 
         $data['body']['transaction'] = $this->getTransactionData();
 
-        if($this->getCard()->getNumber()){
+        if ($this->getCard()->getNumber()) {
             $data['body']['card']    = $this->getCardData();
         }
 
-        if($this->getBusiness()) $data['body']['dba'] = $this->getBusinessData();
+        if ($this->getBusiness()) {
+            $data['body']['dba'] = $this->getBusinessData();
+        }
 
-        if($bank = $this->getBank())$data['body']['bank'] = $this->getBankData();
+        if ($bank = $this->getBank()) {
+            $data['body']['bank'] = $this->getBankData();
+        }
 
         if($identifier = $this->getAccountIdentifier()){
             $data['wallet']['accountIdentifier']    = $identifier;
             $data['wallet']['accountKey']           = $this->getAccountKey();
         }
 
-       $data['body']['customer'] = $this->getCustomerData();
-       $data['body']['billingAddress'] = array(
-           'street'         => $card->getBillingAddress1(),
-           'city'           => $card->getCity(),
-           'countryCode'    => $card->getCountry()
+        $data['body']['customer'] = $this->getCustomerData();
+        $data['body']['billingAddress'] = array(
+            'street'         => $card->getBillingAddress1(),
+            'city'           => $card->getCity(),
+            'countryCode'    => $card->getCountry()
        );
 
-       return $data;
+        return $data;
     }
 
 
@@ -637,7 +641,8 @@ class AuthorizeRequest extends AbstractRequest
     /**
      * @return array
      */
-    public function getCustomerData(){
+    public function getCustomerData()
+    {
         /** @var CreditCard $card */
         $card = $this->getCard();
         $data = array(
@@ -657,9 +662,7 @@ class AuthorizeRequest extends AbstractRequest
             'taxNumber'             => $this->getTaxNumber(),
             'httpUserAgent'         => $this->getHttpUserAgent(),
             'deviceType'            => $this->getDeviceType()
-
-       );
-
+        );
         return ($data);
     }
 

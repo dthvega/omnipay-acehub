@@ -6,7 +6,6 @@ use Omnipay\Common\CreditCard;
 use Omnipay\Common\Helper;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
-
 /**
  * Class Bank
  * @package Omnipay\Acehub\Objects
@@ -21,7 +20,7 @@ class Bank extends CreditCard
      */
     public function setIssuerId($value)
     {
-        return $this->setParameter('issuerId',$value);
+        return $this->setParameter('issuerId', $value);
     }
 
     /**
@@ -38,7 +37,7 @@ class Bank extends CreditCard
      */
     public function setCountryCode($value)
     {
-        return $this->setParameter('countryCode',$value);
+        return $this->setParameter('countryCode', $value);
     }
 
     /**
@@ -55,7 +54,7 @@ class Bank extends CreditCard
      */
     public function setName($value)
     {
-        return $this->setParameter('name',$value);
+        return $this->setParameter('name', $value);
     }
 
     /**
@@ -72,7 +71,7 @@ class Bank extends CreditCard
      */
     public function setAccountNumber($value)
     {
-        return $this->setParameter('accountNumber',$value);
+        return $this->setParameter('accountNumber', $value);
     }
 
     /**
@@ -89,7 +88,7 @@ class Bank extends CreditCard
      */
     public function setAccountHolderName($value)
     {
-        return $this->setParameter('accountHolderName',$value);
+        return $this->setParameter('accountHolderName', $value);
     }
 
     /**
@@ -106,7 +105,7 @@ class Bank extends CreditCard
      */
     public function setIban($value)
     {
-        return $this->setParameter('iban',$value);
+        return $this->setParameter('iban', $value);
     }
 
     /**
@@ -123,7 +122,7 @@ class Bank extends CreditCard
      */
     public function setBic($value)
     {
-        return $this->setParameter('bic',$value);
+        return $this->setParameter('bic', $value);
     }
 
     /**
@@ -140,7 +139,7 @@ class Bank extends CreditCard
      */
     public function setBankCode($value)
     {
-        return $this->setParameter('bankCode',$value);
+        return $this->setParameter('bankCode', $value);
     }
 
     /**
@@ -157,7 +156,7 @@ class Bank extends CreditCard
      */
     public function setMandateId($value)
     {
-        return $this->setParameter('mandateId',$value);
+        return $this->setParameter('mandateId', $value);
     }
 
     /**
@@ -174,7 +173,7 @@ class Bank extends CreditCard
      */
     public function setDateCollection($value)
     {
-        return $this->setParameter('dateCollection',$value);
+        return $this->setParameter('dateCollection', $value);
     }
 
     /**
@@ -191,7 +190,7 @@ class Bank extends CreditCard
      */
     public function setDateMandateSigned($value)
     {
-        return $this->setParameter('dateMandateSigned',$value);
+        return $this->setParameter('dateMandateSigned', $value);
     }
 
     /**
@@ -202,4 +201,3 @@ class Bank extends CreditCard
         return $this->getParameter('dateMandateSigned');
     }
 }
-

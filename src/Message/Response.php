@@ -2,7 +2,6 @@
 
 namespace Omnipay\Acehub\Message;
 
-
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\RedirectResponseInterface;
 
@@ -27,7 +26,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function isRedirect()
     {
-        return (key_exists('redirect',$this->data['body']));
+        return (key_exists('redirect', $this->data['body']));
     }
 
     /**
@@ -36,7 +35,6 @@ class Response extends AbstractResponse implements RedirectResponseInterface
     public function getRedirectUrl()
     {
        return $this->isRedirect() ? $this->data['body']["redirect"]["url"] :null;
-
     }
 
     /**
@@ -60,7 +58,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getMessage()
     {
-        if(!$this->isSuccessful()){
+        if (!$this->isSuccessful()) {
             return $this->data['body']['error']['message'];
         }
         return $this->data['description'];
@@ -71,7 +69,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getCode()
     {
-        if(!$this->isSuccessful()){
+        if (!$this->isSuccessful()) {
             return $this->data['body']['error']["code"];
         }
         return $this->data['result'];
@@ -92,7 +90,4 @@ class Response extends AbstractResponse implements RedirectResponseInterface
     {
         return ($this->isSuccessful()) ? $this->data['body']['head']['requestCode']:null;
     }
-
-
-
 }
