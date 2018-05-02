@@ -58,7 +58,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getMessage()
     {
-        if (!$this->isSuccessful()) {
+        if (!$this->isSuccessful() && !$this->isRedirect()) {
             return $this->data['body']['error']['message'];
         }
         return $this->data['description'];
@@ -69,7 +69,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getCode()
     {
-        if (!$this->isSuccessful()) {
+        if (!$this->isSuccessful() && !$this->isRedirect()) {
             return $this->data['body']['error']["code"];
         }
         return $this->data['result'];
