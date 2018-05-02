@@ -80,7 +80,7 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getTransactionReference()
     {
-        return ($this->isSuccessful()) ?$this->data['body']['transaction']['id'] : null;
+        return ($this->isSuccessful() || $this->isRedirect()) ?$this->data['body']['transaction']['id'] : null;
     }
 
     /**
@@ -88,6 +88,6 @@ class Response extends AbstractResponse implements RedirectResponseInterface
      */
     public function getRequestCode()
     {
-        return ($this->isSuccessful()) ? $this->data['body']['head']['requestCode']:null;
+        return ($this->isSuccessful() || $this->isRedirect()) ? $this->data['body']['head']['requestCode']:null;
     }
 }
