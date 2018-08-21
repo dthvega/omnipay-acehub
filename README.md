@@ -3,7 +3,7 @@
 **Acehub driver for the Omnipay PHP payment processing library**
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements Acehub support for Omnipay.
+processing library for PHP 7.1+. This package implements Acehub support for Omnipay.
 
 ## Installation
 
@@ -13,7 +13,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "dthvega/omnipay-acehub": "~0.5"
+        "dthvega/omnipay-acehub": "~1.0"
     }
 }
 ```
